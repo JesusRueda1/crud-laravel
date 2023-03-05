@@ -1,11 +1,19 @@
 @extends('layouts.app')
 
+
+@section('css')
+<link rel="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap4.min.css" href="styleshet">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"> -->
+
+@endsection 
+
 @section('template_title')
     Ciudade
 @endsection
-
+<link rel="stylesheet" type="text/css" href="{{asset('DataTables/datatables.min.css')}}">
 @section('content')
-    <div class="container-fluid">
+<div class="container table table-striped table-bordered"  style="width:100%"> 
+    <div id="ciudad" class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -28,7 +36,7 @@
                             <p>{{ $message }}</p>
                         </div>
                     @endif
-
+                
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
@@ -64,8 +72,23 @@
                         </div>
                     </div>
                 </div>
+            </div>
                 {!! $ciudades->links() !!}
             </div>
         </div>
     </div>
-@endsection
+    @section('js')
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap4.min.js"></script>
+    <script src="{{asset('jquery-3.6.0.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('DataTables/datatables.min.js')}}" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $('#example').DataTable();
+        });
+    </script>
+
+    @endsection
+    @endsection

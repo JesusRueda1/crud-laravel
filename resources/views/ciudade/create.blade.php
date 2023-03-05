@@ -1,11 +1,16 @@
 @extends('layouts.app')
 
+@section('css')
+<link rel="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap4.min.css" href="styleshet">
+@endsection 
+
 @section('template_title')
     Create Ciudade
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
+<div class="container"> 
+    <section id="cliente" class="container">
         <div class="row">
             <div class="col-md-12">
 
@@ -26,5 +31,6 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 @endsection

@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        @yield('css')
+
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -136,5 +138,6 @@
                 </div>
             </div>
         </div>
+        @yield('js')
     </body>
 </html>

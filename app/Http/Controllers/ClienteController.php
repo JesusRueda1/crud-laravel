@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cliente;
 use App\Models\Ciudade;
 use Illuminate\Http\Request;
+use Illuminate\Http\pagination\paginator;
 
 /**
  * Class ClienteController
@@ -19,10 +20,10 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::paginate();
+        $clientes = Cliente::paginate(5);
 
         return view('cliente.index', compact('clientes'))
-            ->with('i', (request()->input('page', 1) - 1) * $clientes->perPage());
+            ->with('i', (request()->input('page', 1) - 1) * $clientes->perPage(5));
     }
 
     /**
@@ -42,6 +43,7 @@ class ClienteController extends Controller
      *
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
+     * 
      */
     public function store(Request $request)
     {
