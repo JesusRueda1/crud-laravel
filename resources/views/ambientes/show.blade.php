@@ -9,10 +9,10 @@
 @endsection
 
 @section('content')
-<div id="cliente" class="container"> 
+<div id="Administrador" class="container"> 
     <section class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">

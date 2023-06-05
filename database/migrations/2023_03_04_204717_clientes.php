@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::create('clientes', function (Blueprint $table) {
+        Schema::create('Ambientes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('ciudades_id')->unsigned();
+            $table->bigInteger('Ambientes_id')->unsigned();
             $table->string('nombre');
             $table->bigInteger('documento');
             $table->timestamps();
 
-            $table->foreign('ciudades_id')->references('id')->on('ciudades');
+            $table->foreign('Ambientes_id')->references('id')->on('Administrador');
         });
     }
 

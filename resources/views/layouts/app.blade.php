@@ -33,10 +33,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('ciudades.index') }}">{{ __('Ciudades') }}</a>
+                            <a class="nav-link" href="{{ route('Administrador.index') }}">{{ __('Administrador') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('clientes.index') }}">{{ __('Clientes') }}</a>
+                            <a class="nav-link" href="{{ route('Ambiente.index') }}">{{ __('Ambiente') }}</a>
                         </li>
                     </ul>
                     {{-- fin restricción --}}

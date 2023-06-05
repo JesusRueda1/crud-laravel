@@ -10,7 +10,7 @@
 
 @section('content')
 <div class="container"> 
-    <section id="cliente" class="container">
+    <section id="Administrador" class="container">
         <div class="row">
             <div class="col-md-12">
 
@@ -24,7 +24,7 @@
                         <form method="POST" action="{{ route('ciudades.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('ciudade.form')
+                            @include('Administrador.form')
 
                         </form>
                     </div>

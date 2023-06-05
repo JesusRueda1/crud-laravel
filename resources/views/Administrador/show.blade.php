@@ -1,36 +1,36 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $cliente->name ?? 'Show Cliente' }}
+    {{ $Administrador->name ?? 'Show Administrador' }}
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
+    <section class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Cliente</span>
+                            <span class="card-title">Show Administrador</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('clientes.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('Administradors.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Ciudades Id:</strong>
-                            {{ $cliente->ciudades_id }}
+                            <strong>Ambientes Id:</strong>
+                            {{ $Administrador->Ambientes_id }}
                         </div>
                         <div class="form-group">
                             <strong>Nombre:</strong>
-                            {{ $cliente->nombre }}
+                            {{ $Administrador->nombre }}
                         </div>
                         <div class="form-group">
                             <strong>Documento:</strong>
-                            {{ $cliente->documento }}
+                            {{ $Administrador->documento }}
                         </div>
 
                     </div>

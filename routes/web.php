@@ -21,5 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('ciudades', App\Http\Controllers\CiudadeController::class)->middleware('auth');
-Route::resource('clientes', App\Http\Controllers\ClienteController::class)->middleware('auth');
+Route::resource('Administrador', App\Http\Controllers\CiudadeController::class)->middleware('auth');
+Route::resource('Ambientes', App\Http\Controllers\ClienteController::class)->middleware('auth');
